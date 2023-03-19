@@ -11,19 +11,20 @@ Este video es el primero de varios y cubriremos ejemplos básicos que tiene esta
 
 Los ejemplos que haremos son :
 
-Mostrar un mapa.
-Agregar Latitud y Longitud.
-Mostrar diferente tipos de Mapas.
-Uso de archivo GeoJSON(básico).
-Agregar Marcadores.
-Agregar Marcadores con Iconos.
-Agregar Marcador Círculo (radio es en píxeles).
-Agregar varios Marcadores.
-Agregar Círculos(radio es en Kilómetros).
-Agregar Rectángulo.
-Agregar popup/ mensaje emerjente.
-Agregar Capas.
-
+<ol>
+  <li>Mostrar un mapa.</li>
+  <li>Agregar Latitud y Longitud.</li>
+  <li>Mostrar diferente tipos de Mapas.</li>
+  <li>Uso de archivo GeoJSON(básico).</li>
+  <li>Agregar Marcadores.</li>
+  <li>Agregar Marcadores con Iconos.</li>
+  <li>Agregar Marcador Círculo (radio es en píxeles).</li>
+  <li>Agregar varios Marcadores.</li>
+  <li>Agregar Círculos(radio es en Kilómetros).</li>
+  <li>Agregar Rectángulo.</li>
+  <li>Agregar popup/ mensaje emerjente.</li>
+  <li>Agregar Capas.</li>
+</ol>
 Link de soporte :
 
 Documentación Oficial Folium
