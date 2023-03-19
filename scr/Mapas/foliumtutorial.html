@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b145e4ba12026f9b3055d8e406aaf78b {
+                #map_55863424147bcc966fc224d4041d2bbf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_b145e4ba12026f9b3055d8e406aaf78b" ></div>
+            <div class="folium-map" id="map_55863424147bcc966fc224d4041d2bbf" ></div>
         
 </body>
 <script>
     
     
-            var map_b145e4ba12026f9b3055d8e406aaf78b = L.map(
-                "map_b145e4ba12026f9b3055d8e406aaf78b",
+            var map_55863424147bcc966fc224d4041d2bbf = L.map(
+                "map_55863424147bcc966fc224d4041d2bbf",
                 {
-                    center: [34.06, -110.25],
+                    center: [34.06, -118.25],
                     crs: L.CRS.EPSG3857,
                     zoom: 8,
                     zoomControl: true,
@@ -60,24 +60,48 @@
 
         
     
-            var tile_layer_425801498913ff4bfa48d3b04f62d6d8 = L.tileLayer(
-                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_b145e4ba12026f9b3055d8e406aaf78b);
+            var tile_layer_f09ba046d3cae313ddc0124827d56eca = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_55863424147bcc966fc224d4041d2bbf);
         
     
-            var circle_marker_1ea406573b44b3e7bb423e5d0dea4c18 = L.circleMarker(
-                [34.06, -118.25],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45, "stroke": true, "weight": 3}
-            ).addTo(map_b145e4ba12026f9b3055d8e406aaf78b);
+            var feature_group_39ab87bbe692a543203fdc5fb8201c15 = L.featureGroup(
+                {}
+            ).addTo(map_55863424147bcc966fc224d4041d2bbf);
         
     
-            circle_marker_1ea406573b44b3e7bb423e5d0dea4c18.bindTooltip(
-                `<div>
-                     Hola mapa
-                 </div>`,
-                {"sticky": true}
-            );
+            var circle_marker_9d872b7e561247b4e10d28e879ccc968 = L.circleMarker(
+                [34.06, -118.35],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_39ab87bbe692a543203fdc5fb8201c15);
+        
+    
+            var feature_group_56ebc8417eb88817fe88e3424a0af488 = L.featureGroup(
+                {}
+            ).addTo(map_55863424147bcc966fc224d4041d2bbf);
+        
+    
+            var marker_376c00906f6607b7becb19048251fee3 = L.marker(
+                [34.14, -118.35],
+                {}
+            ).addTo(feature_group_56ebc8417eb88817fe88e3424a0af488);
+        
+    
+            var layer_control_a09207b8d075c02bdc7cbcba480bcafb = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f09ba046d3cae313ddc0124827d56eca,
+                },
+                overlays :  {
+                    "Circle Marker" : feature_group_39ab87bbe692a543203fdc5fb8201c15,
+                    "Marker" : feature_group_56ebc8417eb88817fe88e3424a0af488,
+                },
+            };
+            L.control.layers(
+                layer_control_a09207b8d075c02bdc7cbcba480bcafb.base_layers,
+                layer_control_a09207b8d075c02bdc7cbcba480bcafb.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55863424147bcc966fc224d4041d2bbf);
         
 </script>
 </html>

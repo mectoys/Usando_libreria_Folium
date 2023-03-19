@@ -1,36 +1,37 @@
 import os.path
 import random
 import folium
+import pandas as pd
 
-#1
+
 def SaveLocation():
     dirname = os.path.dirname(__file__)
     dir = r"Mapas\foliumtutorial.html"
     savelocation = os.path.join(dirname, dir)
     return savelocation
 
-#2
+#1
 def DisplayWebMapTiles():
     m = folium.Map()
     m.save(SaveLocation())
 
-#3
+#2
 def DisplayWebMapName():
     number = random.randint(0, 3)
     Name_Tiles = ["Stamen Terrain", "Stamen Toner", "cartodb positron", "OpenStreetMap"]
     m = folium.Map(tiles="Stamen Terrain")
     m.save(SaveLocation())
-#4
+#3
 #latitud y longitud
 def DisplayGeolocation():
     m = folium.Map(location=(49.25, -123.12), tiles="cartodb positron")
     m.save(SaveLocation())
-#5
+#4
 #Zoom
 def DisplayMapWithZoom():
     m = folium.Map(location=(30,10),zoom_start=5, tiles="cartodb positron")
     m.save(SaveLocation())
-#6
+#5
 #GoeJsonLayer
 def DisplayGeoJSONLayer():
     political_countries_url = (
@@ -40,13 +41,13 @@ def DisplayGeoJSONLayer():
 
     folium.GeoJson(political_countries_url).add_to(m)
     m.save(SaveLocation())
-#7
+#6
 #marcadores
 def DisplayMarkerLayer():
     m = folium.Map(location=(100, 10), zoom_start=2, tiles="cartodb positron")
     folium.Marker(location=[34.06,-118.25]).add_to(m)
     m.save(SaveLocation())
-#8
+#7
 #Marcador con Icono
 def DisplayMarkerWithIcon():
     #https://fontawesome.com/v4/icon/bandcamp
@@ -54,7 +55,7 @@ def DisplayMarkerWithIcon():
     folium.Marker(location=[34.06, -118.25],icon=folium.Icon(icon="podcast",prefix='fa',color="red")).add_to(m)
 
     m.save(SaveLocation())
-#9
+#8
 def AdCircleMarker():
     m = folium.Map(location=(34.06, -110.25), zoom_start=8, tiles="cartodb positron")
     folium.CircleMarker(
@@ -68,6 +69,69 @@ def AdCircleMarker():
     ).add_to(m)
     m.save(SaveLocation())
 
+#9
+def AddServeralMarker():
+    coords = pd.DataFrame({'lon': [34.06, 34.17, 34.42],
+                           'lat': [-118.25, -118.40, -118.89]})
+
+    m =folium.Map(location =[34.06, -118.25],zoom_start=8)
+
+    for index, row in coords.iterrows():
+        folium.Marker(location=[row['lon'], row['lat']]).add_to(m)
+        m.save(SaveLocation())
+#10
+def AddCircle():
+    #Radio de 50 km
+    m= folium.Map(location=[34.06,-118.25],zoom_start=8)
+    folium.Circle(
+        location=[34.06,-118.25],
+        radius=60000,
+        color="red",
+        fill=True,
+        fill_color="yellow").add_to(m)
+    m.save(SaveLocation())
+#11
+def AddRectagle():
+
+    m = folium.Map(location=[34.06, -118.25], zoom_start=8)
+    upper_left = [34.15, -118.44]
+    upper_right = [34.15, -118.06]
+    lower_right = [33.89, -118.06]
+    lower_left = [33.89, -118.44]
+
+    folium.Rectangle(
+        bounds=[upper_left,upper_right,lower_right,lower_left],
+        stroke=True,
+        fill=True,
+        color="blue",
+        fill_color="#3388ff",
+        fill_opaacity=0.8).add_to(m)
+    m.save(SaveLocation())
+#12
+def AddPopups():
+    m = folium.Map(location=[34.06, -118.25], zoom_start=8)
+    folium.CircleMarker(
+        location=[34.06, -118.25],
+        fill=True,popup="<h2>Estoy en los Angeles!</h2>").add_to(m)
+    m.save(SaveLocation())
+
+#13
+def AddLayers():
+    m = folium.Map(location=[34.06, -118.25], zoom_start=8)
+
+    folium.CircleMarker(
+        location=[34.06,-118.35]).add_to(
+        folium.FeatureGroup(name="Circle Marker").add_to(m))
+
+    folium.Marker(location=[34.14,-118.35]).add_to(
+        folium.FeatureGroup(name="Marker").add_to(m))
+
+    folium.LayerControl().add_to(m)
+    m.save(SaveLocation())
+
+
+
+
 if __name__ == '__main__':
     # DisplayWebMapTiles()
     # DisplayWebMapName()
@@ -76,4 +140,9 @@ if __name__ == '__main__':
     #DisplayGeoJSONLayer()
     #DisplayMarkerLayer()
     #DisplayMarkerWithIcon()
-    AdCircleMarker()
+    #AdCircleMarker()
+   # AddServeralMarker()
+   # AddCircle()
+   # AddRectagle()
+   # AddPopups()
+    AddLayers()
