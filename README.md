@@ -22,7 +22,7 @@ Los ejemplos que haremos son :
   <li>Agregar varios Marcadores.</li>
   <li>Agregar Círculos(radio es en Kilómetros).</li>
   <li>Agregar Rectángulo.</li>
-  <li>Agregar popup/ mensaje emerjente.</li>
+  <li>Agregar popup/ mensaje emergente.</li>
   <li>Agregar Capas.</li>
 </ol>
 Link de soporte :
