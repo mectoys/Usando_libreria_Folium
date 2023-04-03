@@ -1,6 +1,8 @@
 Ejemplo de uso de la librería Folium para crear mapas interactivos en Python
 
-![Lib Folium](https://user-images.githubusercontent.com/7143758/226186697-b8097b60-de77-4a91-ab70-2a0b80fdc0e1.png)
+Imágen vídeo PARTE 3
+
+![Lib FoliumPart3](https://user-images.githubusercontent.com/7143758/229391971-04a23765-64e5-4358-8d74-eebc5c580189.png)
 
 
 Folium es una excelente biblioteca de Python que facilita la visualización de datos geoespaciales en mapas interactivos utilizando el poder de Leaflet.js.
@@ -24,6 +26,13 @@ Los ejemplos que haremos son :
   <li>Agregar Rectángulo.</li>
   <li>Agregar popup/ mensaje emergente.</li>
   <li>Agregar Capas.</li>
+  <li>Agregar plugin MiniMap.</li>
+  <li>Agregar plugin Mapa Día/Noche (Terminator).</li>
+  <li>Agregar plugin búsqueda (GeoCoder).</li>
+  <li>Agregar plugin agrupación Marker (ClusterMarker).</li>
+  <li>Agregar  plugin Mapa de Calor (Heatmap).</li>
+  <li>Agregar plugin una línea poligonal (No plugins)</li>
+
 </ol>
 Link de soporte :
 
@@ -40,6 +49,9 @@ http://geojson.xyz/
 Conclusiones :
 Si está trabajando con datos que tienen un componente geográfico, intenta usar Folium para visualizarlos y obtener información adicional. Además, 
 puedes crear un informe que tus colegas querrán ver y que podrás compartir como un sitio web estático.
+
+Imágen vídeo PARTE 1
+![Lib Folium](https://user-images.githubusercontent.com/7143758/226186697-b8097b60-de77-4a91-ab70-2a0b80fdc0e1.png)
 
 Imágen vídeo PARTE 2
 
