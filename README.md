@@ -15,9 +15,9 @@ Los ejemplos que haremos son :
 
 <ol>
   <li>Mostrar un mapa.</li>
-  <li>Agregar tipos de mapa.</li>
-  <li>Agregar Latitud y Longitud.</li>
   <li>Mostrar diferente tipos de Mapas.</li>
+  <li>Agregar Latitud y Longitud.</li>
+  <li>Aplicar Zoom a los mapas.</li>
   <li>Uso de archivo GeoJSON(básico).</li>
   <li>Agregar Marcadores.</li>
   <li>Agregar Marcadores con Iconos.</li>
@@ -31,7 +31,7 @@ Los ejemplos que haremos son :
   <li>Agregar plugin Mapa Día/Noche (Terminator).</li>
   <li>Agregar plugin búsqueda (GeoCoder).</li>
   <li>Agregar plugin agrupación Marker (ClusterMarker).</li>
-  <li>Agregar  plugin Mapa de Calor (Heatmap).</li>
+  <li>Agregar plugin Mapa de Calor (Heatmap).</li>
   <li>Agregar plugin una línea poligonal (No plugins)</li>
 
 </ol>
