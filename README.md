@@ -15,6 +15,7 @@ Los ejemplos que haremos son :
 
 <ol>
   <li>Mostrar un mapa.</li>
+  <li>Agregar tipos de mapa.</li>
   <li>Agregar Latitud y Longitud.</li>
   <li>Mostrar diferente tipos de Mapas.</li>
   <li>Uso de archivo GeoJSON(básico).</li>
