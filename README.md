@@ -33,6 +33,7 @@ Los ejemplos que haremos son :
   <li>Agregar plugin agrupación Marker (ClusterMarker).</li>
   <li>Agregar plugin Mapa de Calor (Heatmap).</li>
   <li>Agregar plugin una línea poligonal (No plugins)</li>
+  <li>Agregar plugin Draw agregar varios componetes poligonales.</li>
 
 </ol>
 Link de soporte :
